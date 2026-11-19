@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111827"><link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css"><title>Video Engine</title>
+</head>
+<body>
+<header><div class="logo">▶</div><div><h1>Video Engine</h1><p>AI Video Studio · Mobile PWA</p></div></header>
+<main>
+<section class="hero"><span class="tag">MOBILE STUDIO</span><h2>अपना अगला वीडियो बनाइए</h2><p>Text या photo से वीडियो बनाने के लिए अपना प्रोजेक्ट तैयार करें।</p></section>
+<section class="panel">
+<label for="mode">वीडियो बनाने का तरीका</label>
+<select id="mode"><option value="text">Text to Video</option><option value="image">Photo to Video</option></select>
+<label for="prompt">वीडियो का विवरण / Prompt</label>
+<textarea id="prompt" rows="4" placeholder="जैसे: बारिश में सड़क पर चलता हुआ एक प्यारा छोटा पिल्ला, cinematic style..."></textarea>
+<div id="photoWrap" hidden><label for="photo">फोटो चुनें</label><input id="photo" type="file" accept="image/*"><img id="preview" alt="Photo preview" hidden></div>
+<div class="row"><div><label for="ratio">वीडियो अनुपात</label><select id="ratio"><option>9:16 (Shorts/Reels)</option><option>16:9 (YouTube)</option><option>1:1 (Square)</option></select></div><div><label for="duration">अवधि</label><select id="duration"><option>5 सेकंड</option><option>10 सेकंड</option><option>15 सेकंड</option></select></div></div>
+<button id="prepare">Prompt तैयार करें</button>
+<p id="status" role="status">अभी यह शुरुआती मोबाइल स्टूडियो है। वास्तविक AI rendering जोड़ने के लिए video model/backend कनेक्ट करना होगा।</p>
+</section>
+<section class="panel"><h3>अगला चरण</h3><p>इस starter में मोबाइल UI, photo selection और prompt preparation है। AI वीडियो जनरेशन अभी कनेक्ट नहीं है—कोई नकली Generate बटन या झूठा परिणाम नहीं दिखाया गया है।</p></section>
+</main><footer>Video Engine · आपका निजी प्रोजेक्ट</footer>
+<script src="app.js"></script>
+</body></html>
